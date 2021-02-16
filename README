@@ -1,0 +1,14 @@
+## A working copy of fastjx for testing purposes 
+
+### To create 
+- module load intel.... 
+- make compile 
+- make
+
+
+### To run 
+- ./JX70 > output 
+
+
+### To tidy
+- make clean
