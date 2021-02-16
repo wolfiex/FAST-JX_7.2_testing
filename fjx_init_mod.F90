@@ -49,19 +49,19 @@
       JXUNIT  = 8
 
 ! Read in fast-J X-sections (spectral data)
-      call RD_XXX(JXUNIT,'FJX_spec.dat')
+      call RD_XXX(JXUNIT,'data/FJX_spec.dat')
 
 ! Read in cloud scattering data
-      call RD_CLD(JXUNIT,'FJX_scat-cld.dat')
+      call RD_CLD(JXUNIT,'data/FJX_scat-cld.dat')
 
 ! Read in aerosols scattering data
-      call RD_MIE(JXUNIT,'FJX_scat-aer.dat')
+      call RD_MIE(JXUNIT,'data/FJX_scat-aer.dat')
 
 ! Read in UMich aerosol scattering data
-      call RD_UM (JXUNIT,'FJX_scat-UMa.dat')
+      call RD_UM (JXUNIT,'data/FJX_scat-UMa.dat')
 
 ! Read in T & O3 climatology used to fill e.g. upper layers or if O3 not calc.
-      call RD_PROF(JXUNIT,'atmos_std.dat')
+      call RD_PROF(JXUNIT,'data/atmos_std.dat')
 
         NJXX = NJX
       do J = 1,NJX
@@ -70,7 +70,7 @@
 
 ! Read in photolysis rates used in chemistry code and mapping onto FJX J's
 !---CTM call:  read in J-values names and link to fast-JX names
-      call RD_JS_JX(JXUNIT,'FJX_j2j.dat', TITLEJXX,NJXX)
+      call RD_JS_JX(JXUNIT,'data/FJX_j2j.dat', TITLEJXX,NJXX)
 
 !---setup the random number sequence RAN4
          RANSEED = 66
