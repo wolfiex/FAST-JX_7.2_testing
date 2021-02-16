@@ -100,7 +100,7 @@
 !-----------------------------------------------------------------------
 !--Set up atmosphere for a single column and time for J-values calculation
 !--Nominally taken from CTM, but for standalone here is read in
-      open (77,file='CTM_GrdCld.dat',status='old',err=91)
+      open (77,file='data/CTM_GrdCld.dat',status='old',err=91)
       read (77,*)
       read (77,'(i6)') MYEAR
       read (77,'(i6)') IDAY
@@ -389,5 +389,5 @@
 
       stop
 
-   91 stop 'error in opening CTM_GrdCld.dat file'
+   91 stop 'error in opening data/CTM_GrdCld.dat file'
       end
